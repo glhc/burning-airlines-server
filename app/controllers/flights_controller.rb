@@ -12,6 +12,11 @@ class FlightsController < ApplicationController
   def show
   end
 
+  # GET /flights/1.json
+  def info
+    @flight = Flight.find(params[:id].to_i)
+  end
+
   # GET /flights/new
   def new
     @flight = Flight.new

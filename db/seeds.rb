@@ -12,7 +12,11 @@ require 'date'
 
 @airplane = Airplane.create([
     { name: 'Boeing 747' },
-    { name: 'Boeing 1234' }
+    { name: 'Boeing 748' },
+    { name: 'Boeing 749' },
+    { name: 'Boeing 750' },
+    { name: 'Boeing 751' },
+    { name: 'Boeing 752' }
 ])
 
 flights = Flight.create([
@@ -26,6 +30,12 @@ flights = Flight.create([
     flight_number: 'GA1337',
     origin: 'East Coast', 
     destination: 'West Coast', 
+    date: DateTime.now,
+    airplane_id: 1
+  }, {
+    flight_number: 'GA1337',
+    origin: 'New York', 
+    destination: 'California', 
     date: DateTime.now,
     airplane_id: 1
   }
