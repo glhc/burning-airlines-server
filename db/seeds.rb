@@ -15,19 +15,21 @@ require 'date'
     { name: 'Boeing 1234' }
 ])
 
-flights = Flight.create({
-  flight_number: 'GA123',
-  origin: 'Kansas', 
-  destination: 'Oz', 
-  departure_date: DateTime.now,
-  airplane_id: 2
-}, {
-  flight_number: 'GA1337',
-  origin: 'East Coast', 
-  destination: 'West Coast', 
-  departure_date: DateTime.now,
-  airplane_id: 1
-})
+flights = Flight.create([
+  {
+    flight_number: 'GA123',
+    origin: 'Kansas', 
+    destination: 'Oz', 
+    date: DateTime.now,
+    airplane_id: 2
+  }, {
+    flight_number: 'GA1337',
+    origin: 'East Coast', 
+    destination: 'West Coast', 
+    date: DateTime.now,
+    airplane_id: 1
+  }
+])
 
 
 def create_airplane
