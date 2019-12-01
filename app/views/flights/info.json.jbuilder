@@ -1,5 +1,6 @@
-json.rows @flight.plane.row
-json.columns @flight.plane.column
-json.istaken @flight.plane.column do
-  
+json.rows @flight.airplane.rows
+json.columns @flight.airplane.columns
+json.istaken @flight.airplane.columns do
+  json.
+   
 end

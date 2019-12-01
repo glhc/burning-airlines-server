@@ -15,6 +15,13 @@ class FlightsController < ApplicationController
   # GET /flights/1.json
   def info
     @flight = Flight.find(params[:id].to_i)
+    @seatsTaken = ''
+    
+    @flight.reservations.each.do |res|
+
+      
+    end
+
   end
 
   # GET /flights/new
