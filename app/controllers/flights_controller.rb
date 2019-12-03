@@ -12,16 +12,19 @@ class FlightsController < ApplicationController
   def show
   end
 
-  # GET /flights/1.json
+  # GET /flights/1/info.json
   def info
     @flight = Flight.find(params[:id].to_i)
-    @seatsTaken = ''
-    
-    @flight.reservations.each.do |res|
 
-      
+    @isTaken = []
+
+    @flight.airplane.rows.times do |i|
+      row = []
+      @flight.airplane.columns.times do |j|
+        row.push(nil)
+      end
+      @isTaken.push(row)
     end
-
   end
 
   # GET /flights/new

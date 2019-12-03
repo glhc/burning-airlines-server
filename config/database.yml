@@ -23,14 +23,14 @@ default: &default
 
 development:
   <<: *default
-  database: burning_airline_server_2_development
+  database: burning_airline_server_development
   template: template0
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
   # the same name as the operating system user that initialized the database.
-  #username: burning_airline_server_2
+  #username: burning_airline_server
 
   # The password associated with the postgres role (username).
   #password:
@@ -58,7 +58,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: burning_airline_server_2_test
+  database: burning_airline_server_test
   template: template0
 
 # As with config/credentials.yml, you never want to store sensitive information,
@@ -82,7 +82,7 @@ test:
 #
 production:
   <<: *default
-  database: burning_airline_server_2_production
+  database: burning_airline_server_production
   template: template0
-  username: burning_airline_server_2
-  password: <%= ENV['BURNING_AIRLINE_SERVER_2_DATABASE_PASSWORD'] %>
+  username: burning_airline_server
+  password: <%= ENV['BURNING_AIRLINE_SERVER_DATABASE_PASSWORD'] %>

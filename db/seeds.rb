@@ -10,13 +10,62 @@
 
 require 'date'
 
+@users = User.create([
+  {
+    email: 'first@first.com',
+    password: 'password',
+    first_name: 'Patrick',
+    last_name: 'Horne',
+    is_admin: true
+  }, {
+    email: 'second@second.com',
+    password: 'password',
+    first_name: 'Tristan',
+    last_name: 'w3',
+    is_admin: true
+  }, {
+    email: 'third@third.com',
+    password: 'password',
+    first_name: 'Chen',
+    last_name: 'He',
+    is_admin: true
+  }
+])
+
+@chen = User.find_by first_name: 'Chen'
+@chen.reservations.create([
+  {
+    flight_id: 1,
+    seat: '18B'
+  }
+])
+
 @airplane = Airplane.create([
-    { name: 'Boeing 747' },
-    { name: 'Boeing 748' },
-    { name: 'Boeing 749' },
-    { name: 'Boeing 750' },
-    { name: 'Boeing 751' },
-    { name: 'Boeing 752' }
+    { 
+      name: 'Boeing 747',
+      rows: 20,
+      columns: 4
+    }, { 
+      name: 'Boeing 748',
+      rows: 30,
+      columns: 6
+    }, { 
+      name: 'Boeing 749',
+      rows: 15,
+      columns: 2
+    }, { 
+      name: 'Boeing 750',
+      rows: 20,
+      columns: 8
+    }, { 
+      name: 'Boeing 751',
+      rows: 25,
+      columns: 6
+    }, { 
+      name: 'Boeing 752',
+      rows: 30,
+      columns: 4
+    }
 ])
 
 flights = Flight.create([
