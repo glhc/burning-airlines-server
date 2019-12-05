@@ -9,6 +9,7 @@
 # Create an airplane
 
 require 'date'
+require 'faker'
 
 @users = User.create([
   {
@@ -29,16 +30,32 @@ require 'date'
     first_name: 'Chen',
     last_name: 'He',
     is_admin: true
+  }, {
+    email: 'fourth@fourth.com',
+    password: 'password',
+    first_name: 'Chen',
+    last_name: 'He',
+    is_admin: true
+  }, {
+    email: 'third@third.com',
+    password: 'password',
+    first_name: 'Aaron',
+    last_name: 'Cox',
+    is_admin: true
+  }, {
+    email: 'fourth@fourth.com',
+    password: 'password',
+    first_name: 'Kyle',
+    is_admin: true
+  }, {
+    email: 'fifth@fifth.com',
+    password: 'password',
+    first_name: 'Yianni',
+    last_name: 'He',
+    is_admin: true
   }
 ])
 
-@chen = User.find_by first_name: 'Chen'
-@chen.reservations.create([
-  {
-    flight_id: 1,
-    seat: '18B'
-  }
-])
 
 @airplane = Airplane.create([
     { 
@@ -76,13 +93,73 @@ flights = Flight.create([
     date: DateTime.now,
     airplane_id: 2
   }, {
-    flight_number: 'GA1337',
+    flight_number: 'GA124',
     origin: 'East Coast', 
     destination: 'West Coast', 
     date: DateTime.now,
     airplane_id: 1
   }, {
-    flight_number: 'GA1337',
+    flight_number: 'GA125',
+    origin: 'New York', 
+    destination: 'California', 
+    date: DateTime.now,
+    airplane_id: 1
+  }, {
+    flight_number: 'GA126',
+    origin: 'New York', 
+    destination: 'California', 
+    date: DateTime.now,
+    airplane_id: 1
+  }, {
+    flight_number: 'GA127',
+    origin: 'New York', 
+    destination: 'California', 
+    date: DateTime.now,
+    airplane_id: 1
+  }, {
+    flight_number: 'GA128',
+    origin: 'New York', 
+    destination: 'California', 
+    date: DateTime.now,
+    airplane_id: 1
+  }, {
+    flight_number: 'GA129',
+    origin: 'New York', 
+    destination: 'California', 
+    date: DateTime.now,
+    airplane_id: 1
+  }, {
+    flight_number: 'GA130',
+    origin: 'New York', 
+    destination: 'California', 
+    date: DateTime.now,
+    airplane_id: 1
+  }, {
+    flight_number: 'GA131',
+    origin: 'New York', 
+    destination: 'California', 
+    date: DateTime.now,
+    airplane_id: 1
+  }, {
+    flight_number: 'GA132',
+    origin: 'New York', 
+    destination: 'California', 
+    date: DateTime.now,
+    airplane_id: 1
+  }, {
+    flight_number: 'GA133',
+    origin: 'New York', 
+    destination: 'California', 
+    date: DateTime.now,
+    airplane_id: 1
+  }, {
+    flight_number: 'GA134',
+    origin: 'New York', 
+    destination: 'California', 
+    date: DateTime.now,
+    airplane_id: 1
+  }, {
+    flight_number: 'GA135',
     origin: 'New York', 
     destination: 'California', 
     date: DateTime.now,
@@ -90,6 +167,18 @@ flights = Flight.create([
   }
 ])
 
+def make_reservations_for_user user_first_name
+  @user = User.find_by first_name: user_first_name
+  @user.reservations.create([
+    {
+      flight_id: 1,
+      seat: "18B"
+    }, {
+      flight_id: 2,
+      seat: "19C"
+    }
+  ])
+end
 
 def create_airplane
   @airplane = Airplane.create(
