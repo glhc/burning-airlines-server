@@ -1,3 +1,9 @@
+<div class="mainHeader">
+  <h1>Burning Airlines</h1>
+  <button>Crea Plane</button>
+
+</div>
+
 <%= form_with(model: airplane, local: true) do |form| %>
   <% if airplane.errors.any? %>
     <div id="error_explanation">
@@ -11,22 +17,33 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+  <div class="middleSection">
+    <div class="top">
+      <div class="field">
+        <%= form.select :name, ["Big Plane", "Small Plane"] %>
+      </div>
+
+      <div class="field">
+        <%= form.number_field :rows, placeholder: "Rows" %>
+      </div>
+
+      <div class="field">
+        <%= form.number_field :columns, placeholder: "Columns" %>
+      </div>
+      <div class="spacer"></div>
+
+    </div>
+    <div class="bottom">
+      
+      <a href="./">cancel</a>
+
+      <%= form.submit %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :rows %>
-    <%= form.number_field :rows %>
+  <div class="plane">
+  
   </div>
 
-  <div class="field">
-    <%= form.label :columns %>
-    <%= form.number_field :columns %>
-  </div>
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
 <% end %>
