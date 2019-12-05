@@ -184,6 +184,41 @@ def create_airplane
   end
 end
 
+def create_reservations_for_flight flight
+  # get number of rows and columns
+  rows = flight.airplane.rows
+  columns = flight.airplane.columns
+  users = User.all
+  
+  # Make an array of seat letters
+  seat_letter_array = []
+  columns.times do |i|
+    seat_letter_array.push (65 + i).chr
+  end
 
+  users.each do |user|
+    new_seat = nil
+    seat_selected = false
+    while !seat_selected do
+      # random row
+      possible_seat_row = (Random.rand * rows).ceil 
+      # random seat index
+      possible_seat_column = (Random.rand * column).floor
+      # convert to letter
+      possible_seat_letter = seat_letter_array[possible_seat_column]
+      possible_seat = possible_seat_row.to_s + possible_seat_letter
+
+      if Reservations.find_by seat: possible_seat
+        new_seat = possible_seat
+        seat_selected = true
+      end
+    end
+
+    user.reservations.create({
+      flight_id: flight.id, 
+      seat: new_seat,
+    })
+  end
+end
 
 

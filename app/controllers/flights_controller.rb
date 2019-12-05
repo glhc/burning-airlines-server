@@ -5,6 +5,22 @@ class FlightsController < ApplicationController
   # GET /flights.json
   def index
     @flights = Flight.all
+    # empty array to pass capacity of all flights
+    @capacity_array = {}
+    # empty array to pass airplane_model
+    @airplane_model_array = {} 
+
+    @flights.each do |flight|
+      rows = flight.airplane.rows
+      columns = flight.airplane.columns
+      capacity = rows * columns
+
+      airplane_model = flight.airplane.name
+      # use .merge!("key" => "value") syntax to append id => capacity or id => model
+      @capacity_array.merge! capacity
+      @airplane_model_array.push airplane_model
+
+    end
   end
 
   # GET /flights/1
