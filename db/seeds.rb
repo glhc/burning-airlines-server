@@ -27,18 +27,6 @@ require 'faker'
   }, {
     email: 'third@third.com',
     password: 'password',
-    first_name: 'Chen',
-    last_name: 'He',
-    is_admin: true
-  }, {
-    email: 'fourth@fourth.com',
-    password: 'password',
-    first_name: 'Chen',
-    last_name: 'He',
-    is_admin: true
-  }, {
-    email: 'third@third.com',
-    password: 'password',
     first_name: 'Aaron',
     last_name: 'Cox',
     is_admin: true
