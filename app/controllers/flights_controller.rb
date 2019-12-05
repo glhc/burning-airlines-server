@@ -14,11 +14,11 @@ class FlightsController < ApplicationController
       rows = flight.airplane.rows
       columns = flight.airplane.columns
       capacity = rows * columns
-
       airplane_model = flight.airplane.name
+      #
       # use .merge!("key" => "value") syntax to append id => capacity or id => model
-      @capacity_array.merge! capacity
-      @airplane_model_array.push airplane_model
+      @capacity_array.merge! flight.id => capacity
+      @airplane_model_array.merge! flight.id => airplane_model
 
     end
   end
