@@ -78,79 +78,79 @@ flights = Flight.create([
     flight_number: 'GA123',
     origin: 'Kansas', 
     destination: 'Oz', 
-    date: DateTime.now,
+    date: "24/12/2019",
     airplane_id: 2
   }, {
     flight_number: 'GA124',
     origin: 'East Coast', 
     destination: 'West Coast', 
-    date: DateTime.now,
+    date: "24/12/2019",
     airplane_id: 1
   }, {
     flight_number: 'GA125',
     origin: 'New York', 
     destination: 'California', 
-    date: DateTime.now,
+    date: "24/12/2019",
     airplane_id: 1
   }, {
     flight_number: 'GA126',
     origin: 'New York', 
     destination: 'California', 
-    date: DateTime.now,
+    date: "24/12/2019",
     airplane_id: 1
   }, {
     flight_number: 'GA127',
     origin: 'New York', 
     destination: 'California', 
-    date: DateTime.now,
+    date: "24/12/2019",
     airplane_id: 1
   }, {
     flight_number: 'GA128',
     origin: 'New York', 
     destination: 'California', 
-    date: DateTime.now,
+    date: "24/12/2019",
     airplane_id: 1
   }, {
     flight_number: 'GA129',
     origin: 'New York', 
     destination: 'California', 
-    date: DateTime.now,
+    date: "24/12/2019",
     airplane_id: 1
   }, {
     flight_number: 'GA130',
     origin: 'New York', 
     destination: 'California', 
-    date: DateTime.now,
+    date: "24/12/2019",
     airplane_id: 1
   }, {
     flight_number: 'GA131',
     origin: 'New York', 
     destination: 'California', 
-    date: DateTime.now,
+    date: "24/12/2019",
     airplane_id: 1
   }, {
     flight_number: 'GA132',
     origin: 'New York', 
     destination: 'California', 
-    date: DateTime.now,
+    date: "24/12/2019",
     airplane_id: 1
   }, {
     flight_number: 'GA133',
     origin: 'New York', 
     destination: 'California', 
-    date: DateTime.now,
+    date: "24/12/2019",
     airplane_id: 1
   }, {
     flight_number: 'GA134',
     origin: 'New York', 
     destination: 'California', 
-    date: DateTime.now,
+    date: "24/12/2019",
     airplane_id: 1
   }, {
     flight_number: 'GA135',
     origin: 'New York', 
     destination: 'California', 
-    date: DateTime.now,
+    date: "24/12/2019",
     airplane_id: 1
   }
 ])
