@@ -25,7 +25,9 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'faker'
 gem 'knock'
 gem 'rack-cors'
-
+# Use bootstrap 
+gem 'bootstrap', '~> 4.3.1'
+gem 'jquery-rails'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
